@@ -1,0 +1,40 @@
+<ion-view view-title="{{'SETTINGS' | translate}}">
+  <ion-content>
+    <div class="list">
+     <uh ng-repeat="config in configList">   
+      <label class="item item-input" ng-if="config.type=='text'||config.type=='number'||config.type=='password'">
+        <span  class="input-label">{{config.name | translate}}</span>
+        <input type="{{config.type}}" ng-model="config.value" placeholder="{{config.placeholder | translate}}" ng-change="update(config)">
+     
+      </label>
+      <label class="item item-input" ng-if="config.type=='range'">
+        <span  class="input-label">{{config.name | translate}} {{config.value}}%</span>
+        <div class="range clear">
+        	<input type="{{config.type}}" min="0" max="100" ng-model="config.value" placeholder="{{config.placeholder | translate}}" ng-change="update(config)">
+     	</div>
+      </label>
+      <label class="item item-input" ng-if="config.type=='toggle'">
+        <span class="input-label">{{config.name | translate}}</span>
+        <label class="toggle">
+           <input type="checkbox" ng-model="config.value" ng-change="update(config)">
+           <div class="track">
+              <div class="handle"></div>
+           </div>
+        </label>
+      </label>
+      <label class="item item-input" ng-if="config.type=='status'">
+        <span class="input-label">{{config.name | translate}}</span>
+        <span>{{config.value}}</span>
+      </label>
+      <label class="item item-select" ng-if="config.type=='select'">
+        <span class="input-label">{{config.name | translate}}</span>
+        <span>
+        	<select ng-model="config.value" ng-change="update(config)">
+		    	<option ng-repeat="option in config.list" value="{{option}}" ng-selected="config.value==option">{{option}}</option>
+		    </select>
+    	</span>
+      </label>
+     </uh> 
+    </div>
+  </ion-content>
+</ion-view>

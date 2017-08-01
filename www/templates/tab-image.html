@@ -1,0 +1,38 @@
+<ion-view view-title="{{'DASHBOARD' | translate}}">
+<ion-content scroll="false">
+    <div class="list">
+        <uh>
+            <label  class="item item-input">
+                <span  class="input-label">Image size</span>
+                <input type="number" min="0" ng-model="dpi" placeholder="percent" ng-change="updateImg(dpi)">
+                <span>(%)</span>
+            </label>
+        </uh>
+        <uh>
+
+            <label class="item item-select">
+                <div class="input-label">
+                <span class="input-label">Convert to SVG</span>
+                <span>
+                    <select ng-model="type" ng-change="changeTypeConvert(type)">
+                        <option value="0">No</option> <!-- not selected / blank option -->
+                        <option value="1">Type 1</option> <!-- interpolation -->
+                        <option value="2">Type 2</option>
+                    </select>
+                </span>
+                <!--(giảm thời gian cắt nhưng chất lượng hình không cao)-->
+                     </div>
+            </label>
+            
+
+        </uh>
+        <!--<div>
+            <ion-list>
+                <ion-radio ng-model="type" ng-value="0" ng-change='changeTypeConvert(type)'>No</ion-radio>
+                <ion-radio ng-model="type" ng-value="1" ng-change='changeTypeConvert(type)'>Type 1</ion-radio>
+                <ion-radio ng-model="type" ng-value="2" ng-change='changeTypeConvert(type)'>Type 2</ion-radio>
+            </ion-list>
+        </div>-->
+    </div>
+</ion-content>
+</ion-view>

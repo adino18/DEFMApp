@@ -1,0 +1,10 @@
+{
+  "name": "EFMApp",
+  "app_id": "3e97516a",
+  "type": "ionic1",
+  "api_key":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJhMWM0OTczYy02MTVhLTQ3YzMtYTQ1YS03YTEwMGY2YjliNDIifQ.7QLU4z0_lzAQhcF8QKmKyvb7TCx11Es9gDZ4bA0Yo2s",
+  "gcm_key":"1061933628042",
+  "watchPatterns": [
+    "scss/**/*"
+  ]
+}
